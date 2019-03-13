@@ -4,7 +4,7 @@
 
 使用npm安装
 
-npm install vue-loading-state --save
+npm install vue-sync-state --save
 
 ### 使用
 
@@ -12,7 +12,7 @@ npm install vue-loading-state --save
 
 ```
 import Vue from 'vue'
-import sync from 'vue-loading-state'
+import sync from 'vue-sync-state'
 
 Vue.use(sync)
 ...
