@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'vue-cropper',
+    library: 'vue-sync-state',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
