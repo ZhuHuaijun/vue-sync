@@ -1,10 +1,17 @@
-import Mask from './Mask'
+import LoadingMask from './LoadingMask'
+import DefaultSpinner from './DefaultSpinner'
 
 const CLASS_NAME = 'sync-loading-mask'
 
 export default {
   install (Vue) {
-    Vue.prototype.$sync = async (asyncAction) => {
+    Vue.prototype.$sync = async (
+      asyncAction,
+      {
+        spinner = DefaultSpinner,
+        backgroundColor = 'transparent'
+      } = {}
+    ) => {
       if (document.querySelector(`.${CLASS_NAME}`)) {
         return
       }
@@ -13,7 +20,18 @@ export default {
       const tempDiv = document.createElement('div')
 
       mask.className = CLASS_NAME
-      let Component = Vue.extend(Mask)
+      let Component = Vue.extend({
+        template: '<loading-mask :spinner="spinner" :backgroundColor="backgroundColor"></loading-mask>',
+        components: {
+          LoadingMask
+        },
+        data() {
+          return {
+            spinner,
+            backgroundColor
+          }
+        }
+      })
 
       mask.appendChild(tempDiv)
       new Component().$mount(tempDiv)

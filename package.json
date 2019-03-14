@@ -1,6 +1,6 @@
 {
   "name": "vue-sync-state",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -9,9 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "vue-loading-spinner": "^1.0.11"
-  },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",

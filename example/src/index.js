@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import sync from '../../dist'
+import sync from '../../src'
 
 Vue.config.productionTip = false
 Vue.use(sync)

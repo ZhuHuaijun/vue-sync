@@ -24,10 +24,11 @@ Vue.use(sync)
 ```
 ...
 <div @click="$sync(handleClick)">
-  点击加载
+  默认样式
 </div>
 
 ...
+
 methods: {
   handleClick () {
 
@@ -39,6 +40,54 @@ methods: {
     })
   }
 }
+
 ...
 
 ```
+
+这里也提供第二个参数来配置加载时展示的组件和背景色。
+
+自定义组件：
+```
+...
+<div @click="$sync(handleClick, { spinner })">
+  自定义组件
+</div>
+
+...
+
+import { Circle4 } from 'vue-loading-spinner'
+
+...
+
+data() {
+  return {
+    spinner: Circle4
+  }
+},
+
+methods: {
+  handleClick () {
+
+    // 被封装的方法返回一个Promise
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve()
+      }, 3000)
+    })
+  }
+}
+
+...
+```
+
+自定义背景色：
+
+```
+<div @click="$sync(handleClick, { backgroundColor: 'rgba(0,0,0,0.1)'})">
+  自定义背景色
+</div>
+
+```
+
+也可以同时自定义组件和背景色。
