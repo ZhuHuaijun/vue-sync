@@ -49,4 +49,5 @@ export default {
   flex-direction column
   align-items center
   justify-content space-around
+  box-sizing border-box
 </style>

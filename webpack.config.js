@@ -37,6 +37,7 @@ module.exports = {
       use: [
         'vue-style-loader',
         'css-loader',
+        'postcss-loader',
         'sass-loader'
       ]
     }, {
@@ -44,6 +45,7 @@ module.exports = {
       use: [
         'vue-style-loader',
         'css-loader',
+        'postcss-loader',
         {
           loader: 'sass-loader',
           options: {
@@ -56,6 +58,7 @@ module.exports = {
       use: [
         'vue-style-loader',
         'css-loader',
+        'postcss-loader',
         'stylus-loader'
       ]
     }]

@@ -25,13 +25,6 @@ export default {
   animation v-clipDelay 1s 0s infinite linear
   animation-fill-mode both
   display inline-block
-@-webkit-keyframes v-clipDelay
-  0%
-    transform rotate(0deg)
-  50%
-    transform rotate(180deg)
-  100%
-    transform rotate(360deg)
 @keyframes v-clipDelay
   0%
     transform rotate(0deg)
